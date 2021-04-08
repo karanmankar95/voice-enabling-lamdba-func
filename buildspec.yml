@@ -1,0 +1,9 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - aws cloudformation package --template-file photosIndex.yaml --s3-bucket lambdadeploycicdbucket --output-template-file photosIndex.yaml
+artifacts:
+  type: zip
+  files:
+    - photosIndex.yamls
